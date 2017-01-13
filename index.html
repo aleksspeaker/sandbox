@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<style type="text/css"> 
+body{background-color: #fafafa; font-family: 'Roboto', sans-serif; margin: 0;}
+
+* {
+    box-sizing: border-box;
+} 
+
+/* This is layout of iPhone 4 screen 320 x 420 px for convenience */
+div#iphone4{
+		overflow-y: auto;
+		position: relative;
+		width: 320px;
+		height: 480px;
+		border: 1px dotted grey;
+		margin: auto;
+		background-color: #fafafa;}
+/* This is page name */
+#pagename {
+		text-align: center;
+		font-family: 'Roboto', sans-serif;
+		font-weight: 300;
+		color: rgba(0,0,0,.87);}
+#convtitle {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.3em;
+	font-weight: 300;
+	color: rgba(0,0,0,.87);}
+.material-icons {color: rgba(0,0,0,.54);}
+div#nav{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 54px;
+	background-color: white;
+	box-shadow: 0 2px 5px rgba(0,0,0,.5);}
+#logo {
+	position: absolute;
+	top: 50%;
+	left: 16px;
+	transform: translate(0%, -50%);}
+#phone {
+	display: inline-block;
+	float: right;
+	margin-right: 16px;
+	top: 50%;
+	transform: translate(0%, 50%);
+}
+#phone:hover {
+	color: black;
+}
+#email:hover {
+	color: black;
+}
+#email {
+	display: inline-block;
+	float: right;
+	margin-right: 16px;
+	top: 50%;
+	transform: translate(0%, 50%);
+}
+/*
+#cardoverlay {
+	display: none;
+	padding: 16px 16px 16px 0px;
+}
+*/
+.avatar {
+	border-radius: 50%;
+	width: 40px;
+	float: left;
+	margin-left: 16px;
+	margin-top: 16px; 
+}
+.avatar:hover {
+	opacity: 0.8
+
+}
+#name {
+	margin-left: 65px;
+	color: rgba(0,0,0,.87);
+	font-weight: 500;
+}
+#post {
+	margin-left: 65px;
+	color: rgba(0,0,0,.87);
+}
+.card{
+	position: relative;
+	margin: auto;
+	width: 100%;
+	height: auto;
+	background-color: white;
+	box-shadow: 0 2px 5px rgba(0,0,0,.5);
+}
+video {
+  width: 100%    !important;
+  height: auto   !important;
+}
+.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+.msg {
+	position: relative;
+	margin-top: 16px;
+	margin-left: 65px;
+	margin-right: 8px; 
+	padding: 1px 16px 8px 16px;
+	width: auto;
+	height: auto;
+	background-color: white;
+	box-shadow: 0 4px 5px rgba(0,0,0,.5);
+	font-size: 0.9em;
+}
+.msg::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: 100%;
+    margin-top: -6px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: lightgrey lightgrey transparent transparent;
+    opacity: 1;
+ }
+ .downicon {
+ 	display: inline-block;
+ 	float: right;
+ 	width: auto;
+ 	height: 24px;
+ 	margin: 0px 0px 16px 16px;
+ }
+ .downicon:hover {
+ 	opacity: 0.8;
+ 	
+ }
+ .timeago {
+ 	position: relative;
+ 	display: inline-block;
+ 	opacity: 0.54;
+ 	font-size: 0.7em;
+ 	bottom: 0px;
+ 	padding-bottom: 8px;
+ 	margin-top: 16px;	
+ }
+ .replfld {
+    width: 100%;
+    height: auto;
+    padding: 12px 20px;
+    resize: none;
+    border: none;
+    position: relative;
+	margin-top: 16px;
+	background-color: white;
+	box-shadow: 0 0px 10px rgba(0,0,0,.5);
+	font-size: 0.9em;
+	bottom: 0px;
+}
+
+.sndbtn {
+	position: absolute;
+}
+
+</style>	
+</head>
+<body>
+
+
+<!-- This is the name of the page -->
+<h2 id="pagename">Bizkonect iPhone 4 layout</h2>
+
+<!-- This is layout of iPhone 4 screen 320 x 420 px for convenience-->
+<div id="iphone4">
+
+<!-- This is top navigation bar -->
+	<div id="nav">
+		<a target="_blank" href="http://www.multicora.com">
+			<img id="logo" src="logo_cf.svg">
+		</a>
+		<a href="tel:+380989235076">
+			<i id="phone" class="material-icons">phone</i>
+		</a>
+		<a target="_blank" href="mailto:info@multicora.com">
+			<i id="email" class="material-icons">email</i>
+		</a>
+	</div>
+
+<!-- This is the title of the conversation -->
+	<h2 id="convtitle">The Brightest Thing</h2>
+
+<!-- This is the material design card element-->		
+	<div class="card">
+
+<!-- This is card overlay container for person's avatar name and position -->
+<!--	<div id="cardoverlay">
+		<img class="avatar" src="avatar.jpg">
+		<div id="name">Barack Obama</div>
+		<div id="post">President @ United States</div>
+	</div> 
+-->
+<!-- This is iframe for embeded video -->
+		<div class="video-container">
+			<iframe class="video" src="https://www.youtube.com/embed/FJB7gbjiJKw" frameborder="0" allowfullscreen>
+			</iframe>
+		</div>
+	</div>
+	<div>
+		<a href="#aboutuser"><img class="avatar" src="avatar.jpg" alt="Barack O."></a>
+	</div>
+	<div class="msg">
+		<p  style="">
+			<i style="opacity: 0.54; font-size: 0.9em;">
+				Barack O. said:</i>
+				<br>Hello John. Take a look to the Brightest thing. Also you might be interested in files I attached:
+		</p>
+		<a target="_blank" href="table.xlsx">
+			<img src="excel.svg" class="downicon">
+		</a>
+		<a target="_blank" href="file.pdf">
+			<img src="pdf.svg" class="downicon">
+		</a>
+ 		<span class="timeago">2 min ago</span>
+	</div>
+	<form style="position: relative;">
+	<button class="sndbtn" type="button" onclick="alert('Hello world!')">SEND</button>
+	<textarea rows="2" cols="1" class="replfld" placeholder="Reply here"></textarea>
+	</form>
+
+</div>
+
+</div>
+
+</body>
+</html>
